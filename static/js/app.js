@@ -104,9 +104,11 @@ layui.define(['jquery','nav','element','layer'],function(exports){
 		        width: '200px'
 		    });
 
-		    $('.layui-nav-item cite').fadeIn();//显示文字
+		    $('.layui-nav-item cite').fadeIn(function(){
+                selected.addClass('layui-nav-itemed');//保持打开状态
+			});//显示文字
 
-		    selected.addClass('layui-nav-itemed');//保持打开状态
+
 
 		    //解绑事件
 		    $('#left').off();
